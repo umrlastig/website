@@ -8,6 +8,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
 .parallax {
 	position: absolute;
 	overflow: hidden;
@@ -605,6 +609,13 @@ section {
 	z-index: 2;
 	margin-top: -60px;
 	border-radius: 50%;
+	width: intrinsic;
+	height: auto;
+}
+
+img {
+	display: inline-block;
+	width: 75%;
 }
 
 .team .title {

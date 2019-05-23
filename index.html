@@ -33,9 +33,11 @@
 	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="css/LASTIG.css">
+	<script src="js/papaparse.min.js"></script>
+	<script src="js/people.js"></script>
 </head>
 
-<body>
+<body onload="displayPeople()">
 	<div class="preloader">
 		<img src="img/loader.gif" alt="Preloader image">
 	</div>
@@ -358,7 +360,7 @@
 	</section>
 
 	<section id="people" class="section gray-bg">
-		<div class="container">
+		<div class="container" id="people-container">
 			<div class="row title text-center">
 				<h2 class="margin-top">People</h2>
 				<h4 class="light muted">Members of LASTIG</h4>
@@ -495,6 +497,7 @@
 		<a href="#" class="close-link"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Scripts -->
+	<script src="js/hal.js"></script>
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
