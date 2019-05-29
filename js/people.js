@@ -22,7 +22,7 @@
 
 // this file contains functions to handle the people.csv file of the members of LASTIG
 	function parseCSVfile() {
-    var data = Papa.parse("https://umrlastig.github.io/lastig_data/people.csv", {
+    var data = Papa.parse("https://raw.githubusercontent.com/umrlastig/lastig_data/master/people.csv", {
                   download: true,
                   header: true,
                   step: function(row) {
