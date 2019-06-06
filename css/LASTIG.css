@@ -1189,6 +1189,14 @@ footer .social-footer li:hover a {
 /* ==========================
  --- Language ---
 ============================= */
+body.en :lang(fr) {
+  display: none;
+}
+
+body.fr :lang(en){
+  display: none;
+}
+
 .flag-icon-background {
   background-size: contain;
   background-position: 50%;

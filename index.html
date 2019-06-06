@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 	<meta charset="UTF-8">
@@ -31,15 +31,16 @@
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
 	<!-- Elegant Icons -->
 	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
-	<link rel="stylesheet" href="css/bootstrap-select.css">
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="css/LASTIG.css">
 	<script src="js/papaparse.min.js"></script>
 	<script src="js/people.js"></script>
+	<script src="js/recruiting.js"></script>
 </head>
 
-<body onload="displayPeople()">
+<body onload="displayPeople();displayRecruiting();" class="en">
 	<div class="preloader">
 		<img src="img/loader.gif" alt="Preloader image">
 	</div>
@@ -54,37 +55,37 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="#"><img src="img/logo.png" data-active-url="img/logo-active.png" alt=""></a>
-				<select class="selectpicker" data-width="fit" data-size="2">
+				<!--select class="selectpicker" data-width="fit" data-size="2">
 					<option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
 					<option  data-content='<span class="flag-icon flag-icon-fr"></span> Français'>Français</option>
-				</select>
+				</select-->
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
 					<li>
-						<a href="#intro" class="lang-en">Home</a>
-						<a href="#intro" class="lang-fr">Accueil</a>
+						<a href="#intro" lang="en">Home</a>
+						<a href="#intro" lang="fr">Accueil</a>
 					</li>
 					<li>
-						<a href="#about" class="lang-en">About</a>
-						<a href="#about" class="lang-fr">Présentation</a>
+						<a href="#about" lang="en">About</a>
+						<a href="#about" lang="fr">Présentation</a>
 					</li>
 					<li>
-						<a href="#news" class="lang-en">News</a>
-						<a href="#news" class="lang-fr">Actualités</a>
+						<a href="#news" lang="en">News</a>
+						<a href="#news" lang="fr">Actualités</a>
 					</li>
 					<li>
-						<a href="#teams" class="lang-en">Teams</a>
-						<a href="#teams" class="lang-fr">Equipes</a>
+						<a href="#teams" lang="en">Teams</a>
+						<a href="#teams" lang="fr">Equipes</a>
 					</li>
 					<li>
-						<a href="#recruiting" class="lang-en">Recruiting</a>
-						<a href="#recruiting" class="lang-fr">Offres</a>
+						<a href="#recruiting" lang="en">Recruiting</a>
+						<a href="#recruiting" lang="fr">Offres</a>
 					</li>
 					<li>
-						<a href="#people" class="lang-en">People</a>
-						<a href="#people" class="lang-fr">Personnel</a>
+						<a href="#people" lang="en">People</a>
+						<a href="#people" lang="fr">Personnel</a>
 					</li>
 					<!--li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li-->
 				</ul>
@@ -100,9 +101,13 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<h3 class="light white">LASTIG</h3>
-							<h1 class="white typed en">Lab on Geographic Information Science for sustainable development and smart cities</h1>
+							<h1 class="white typed en" lang="en">Lab on Geographic Information Science for sustainable development and smart cities</h1>
+							<h1 class="white typed fr" lang="fr">Laboratoire en sciences de l'information géographique pour la ville intelligente et les territoires durables</h1>
 							<span class="typed-cursor">|</span>
 						</div>
+					</div>
+					<div class="row">
+						<input id="toggle-event" type="checkbox" checked data-toggle="toggle" data-size="large" data-onstyle="info" data-offstyle="info" data-on="English" data-off="Français" data-true="en" data-false="fr" >
 					</div>
 				</div>
 			</div>
@@ -112,28 +117,28 @@
 	<section id="about" class="section section-padded">
 		<div class="container">
 			<div class="row text-center title">
-				<h2 class="lang-en">Presentation of the LASTIG</h2>
-				<h2 class="lang-fr">Présentation du LASTIG</h2>
+				<h2 lang="en">Presentation of the LASTIG</h2>
+				<h2 lang="fr">Présentation du LASTIG</h2>
 			</div>
 			<div class="pad-bot40 pad-top40"></div>
 			<div class="panel panel-primary">
-				<div class="panel-heading lang-en">Description of LASTIG lab</div>
-				<div class="panel-heading lang-fr">Description du laboratoire</div>
-				<div class="panel-body lang-fr">
+				<div class="panel-heading" lang="en">Description of LASTIG lab</div>
+				<div class="panel-heading" lang="fr">Description du laboratoire</div>
+				<div class="panel-body" lang="fr">
 					Le LASTIG mène des recherches finalisées en sciences et techniques de l’information géographique. Les recherches de l’unité couvrent l’ensemble du cycle de vie de la donnée géographique ou spatiale, de son acquisition à sa visualisation, en passant par sa modélisation, son intégration et son analyse. Prenant la suite du précédent projet d’unité, le LASTIG s’intéresse particulièrement aux référentiels géographiques spatiotemporels qui sont au coeur des missions de l’IGN. Le LASTIG est composé de <a href="#teams">quatre équipes de recherche</a>. Le LASTIG a trois tutelles, l'IGN, l'<a href="http://www.u-pem.fr/">Université Paris Est Marne-la-Vallée (UPEM)</a>, et l'<a href="https://www.eivp-paris.fr/">Ecole d’ingénieurs de la ville de Paris (EIVP)</a>. Le LASTIG est dirigé par Marc Pierrot Deseilligny depuis le 1er juillet 2018. Les directeurs adjoints sont Pierre-Louis Frison, et Guillaume Touya. La précédente directrice du LASTIG était Bénédicte Bucher de 2010 à 2018.
 				</div>
-				<div class="panel-body lang-en">
+				<div class="panel-body" lang="en">
 					Le LASTIG mène des recherches finalisées en sciences et techniques de l’information géographique. Les recherches de l’unité couvrent l’ensemble du cycle de vie de la donnée géographique ou spatiale, de son acquisition à sa visualisation, en passant par sa modélisation, son intégration et son analyse. Prenant la suite du précédent projet d’unité, le LASTIG s’intéresse particulièrement aux référentiels géographiques spatiotemporels qui sont au coeur des missions de l’IGN. Le LASTIG est composé de <a href="#teams">quatre équipes de recherche</a>. Le LASTIG a trois tutelles, l'IGN, l'<a href="http://www.u-pem.fr/">Université Paris Est Marne-la-Vallée (UPEM)</a>, et l'<a href="https://www.eivp-paris.fr/">Ecole d’ingénieurs de la ville de Paris (EIVP)</a>. Le LASTIG est dirigé par Marc Pierrot Deseilligny depuis le 1er juillet 2018. Les directeurs adjoints sont Pierre-Louis Frison, et Guillaume Touya. La précédente directrice du LASTIG était Bénédicte Bucher de 2010 à 2018.
 				</div>
 			</div>
 			<div class="pad-bot40 pad-top40"></div>
 			<div class="panel panel-success">
-  			<div class="panel-heading lang-en">History of LASTIG lab</div>
-				<div class="panel-heading lang-fr">Historique du LASTIG</div>
-  			<div class="panel-body lang-fr">
+  			<div class="panel-heading" lang="en">History of LASTIG lab</div>
+				<div class="panel-heading" lang="fr">Historique du LASTIG</div>
+  			<div class="panel-body" lang="fr">
     			L'unité de recherche en sciences de l'information géographique de l'IGN (SRSIG, Service de recherche en sciences de l'information géographique) a pris le nom de LaSTIG (laboratoire en sciences et technologies de l'information géographique) en 2015. Cette unité regroupait le service de recherche en sciences de l'information géographique (SRSIG) de l'IGN, des enseignants chercheurs de l'Université Paris Est Marne la Vallée et de l'Ecole Nationale des Sciences Géographiques. Elle a été évaluée par l'AERES sous le nom Service de recherche de l'IGN en <a href="http://www.aeres-evaluation.fr/Etablissements/Institut-geographique-national-IGN">2010</a> et en <a href="http://recherche.ign.fr/doc/RapportEvaluationAERES2013_SR-IGN.pdf">2012</a>. La dernière évolution a eu lieu au cours de l'année 2018 avec l'intégration de l'ancienne équipe de géodésie LAREG à l'<a href="http://www.ipgp.fr/fr/umr-7154-ums-3454">UMR IPGP</a>, et le projet de création d'une nouvelle UMR LASTIG regroupant les chercheurs des anciennes équipes COGIT, LOEMI et MATIS.
   			</div>
-				<div class="panel-body lang-en">
+				<div class="panel-body" lang="en">
 					L'unité de recherche en sciences de l'information géographique de l'IGN (SRSIG, Service de recherche en sciences de l'information géographique) a pris le nom de LaSTIG (laboratoire en sciences et technologies de l'information géographique) en 2015. Cette unité regroupait le service de recherche en sciences de l'information géographique (SRSIG) de l'IGN, des enseignants chercheurs de l'Université Paris Est Marne la Vallée et de l'Ecole Nationale des Sciences Géographiques. Elle a été évaluée par l'AERES sous le nom Service de recherche de l'IGN en <a href="http://www.aeres-evaluation.fr/Etablissements/Institut-geographique-national-IGN">2010</a> et en <a href="http://recherche.ign.fr/doc/RapportEvaluationAERES2013_SR-IGN.pdf">2012</a>. La dernière évolution a eu lieu au cours de l'année 2018 avec l'intégration de l'ancienne équipe de géodésie LAREG à l'<a href="http://www.ipgp.fr/fr/umr-7154-ums-3454">UMR IPGP</a>, et le projet de création d'une nouvelle UMR LASTIG regroupant les chercheurs des anciennes équipes COGIT, LOEMI et MATIS.
 				</div>
 			</div>
@@ -169,8 +174,8 @@
 	<section id="teams" class="section section-padded">
 		<div class="container">
 			<div class="row text-center title">
-				<h2 class="lang-en">Research teams</h2>
-				<h2 class="lang-fr">Equipes de recherche</h2>
+				<h2 lang="en">Research teams</h2>
+				<h2 lang="fr">Equipes de recherche</h2>
 			</div>
 			<div class="row services">
 				<div class="col-md-3">
@@ -179,7 +184,8 @@
 							<img src="img/icons/heart-blue.png" alt="" class="icon">
 						</div>
 						<h4 class="heading">ACTE</h4>
-						<p class="description">Data Acquisition and Processing</p>
+						<p class="description" lang="en">Data Acquisition and Processing</p>
+						<p class="description" lang="fr">Acquisition et traitements</p>
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -188,7 +194,8 @@
 							<img src="img/icons/guru-blue.png" alt="" class="icon">
 						</div>
 						<h4 class="heading">MEIG</h4>
-						<p class="description">Mediation and Enrichment of Geographic Information</p>
+						<p class="description" lang="en">Mediation and Enrichment of Geographic Information</p>
+						<p class="description" lang="fr">Médiation et enrichissement de l'information géographique</p>
 					</div>
 				</div>
 				<div class="col-md-3">
@@ -206,7 +213,8 @@
 							<img src="img/icons/weight-blue.png" alt="" class="icon">
 						</div>
 						<h4 class="heading">GEOVIS</h4>
-						<p class="description">Geovisualisation, Interaction, and Immersion</p>
+						<p class="description" lang="en">Geovisualisation, Interaction, and Immersion</p>
+						<p class="description" lang="fr">Géovisualisation, interaction, et immersion</p>
 					</div>
 				</div>
 			</div>
@@ -217,34 +225,56 @@
 	<section id="recruiting" class="section gray-bg">
 		<div class="container">
 			<div class="row title text-center">
-				<h2 class="margin-top">Recruiting</h2>
-				<h4 class="light muted">Job offers (PhD, post-doc, internship, permanent position)</h4>
+				<h2 class="margin-top" lang="en">Recruiting</h2>
+				<h4 class="light muted" lang="en">Job offers (PhD, post-doc, internship, permanent position)</h4>
+				<h2 class="margin-top" lang="fr">Offres d'emploi</h2>
+				<h4 class="light muted" lang="fr">Offres d'emploi (thèse, post-doc, stage, poste permanent)</h4>
 			</div>
 
 			<div class="row">
 				<div class="row title text-center">
-					<h3 class="light muted">PhD offers</h3>
+					<h3 class="light muted" lang="en">PhD offers</h3>
+					<h3 class="light muted" lang="fr">Thèses</h3>
 					<!--h5 class="light muted">no post-doc offer at the moment)</h5!-->
 				</div>
-				<div class="list-group">
-    			<a class="list-group-item">Géo-référencement précis d'acquisition photogrammétrique de « longues » scènes d'intérieur <span class="label label-success">Offre pourvue</span></a>
-					<a href="http://recherche.ign.fr/labos/cogit/pdf/PROPOSITIONS/2019/projetDoctoralConstructionDuneMemoireDesSitesPollues.pdf" class="list-group-item">Construction d'une mémoire des sites pollués <span class="label label-warning">appel à candidatures pour demandes de financement</span></a>
-					<a href="http://recherche.ign.fr/labos/cogit/pdf/PROPOSITIONS/2019/SujetThese2019_MEIG_Mediation_VF.pdf" class="list-group-item">Modèle de médiation pour la découverte et la réutilisation de contenus géographiques structurés</a>
-					<a href="http://recherche.ign.fr/labos/cogit/pdf/PROPOSITIONS/2019/These_BaseDeConnaissancesTopographique_2019.pdf" class="list-group-item">Création de bases de connaissances topographiques à partir de sources hétérogènes</a>
+				<div class="list-group" id="phd-offers">
+					<h5 class="light muted" lang="en">no PhD offer at the moment</h5>
+					<h5 class="light muted" lang="fr">aucune offre de thèse en ce moment</h5>
+    		</div>
+				<div class="row title text-center" id="postdoc-offers">
+					<h3 class="light muted" lang="en">Post-doc positions</h3>
+					<h3 class="light muted" lang="fr">Post-doc</h3>
+					<h5 class="light muted" lang="en">no PhD post-doc at the moment</h5>
+					<h5 class="light muted" lang="fr">aucune offre de post-doc en ce moment</h5>
 				</div>
 				<div class="row title text-center">
-					<h3 class="light muted">Post-doc positions</h3>
-					<h5 class="light muted">no post-doc offer at the moment</h5>
-				</div>
-				<div class="row title text-center">
-					<h3 class="light muted">Internships</h3>
+					<h3 class="light muted" lang="en">Internships</h3>
+					<h3 class="light muted" lang="fr">Stages</h3>
 					<!--h5 class="light muted">no post-doc offer at the moment</h5!-->
 				</div>
-				<h5 class="regular muted">ACTE team</h5>
-				<div class="list-group">
-					<a class="list-group-item list-group-item-info">Etude de l'impact de luminance directionnelle du ciel sur l'éclairement d'une surface ombrée <span class="label label-success">Offre pourvue</span></a>
-					<a href="http://recherche.ign.fr/labos/matis/pdf/stages/2019/sujet_stage_Loc_ALEGORIA-2019.pdf" class="list-group-item list-group-item-info">Geolocalization of photographs using a database of georeferenced images</a>
-					<a href="http://recherche.ign.fr/labos/matis/pdf/stages/2019/sujet_stage19_reranking.pdf" class="list-group-item list-group-item-info">Pose-driven re-ranking for heterogeneous visual data geo-localization in urban environment</a>
+				<h5 class="regular muted" lang="en">ACTE team</h5>
+				<h5 class="regular muted" lang="fr">équipe ACTE</h5>
+				<div class="list-group" id="intern-acte">
+					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
+					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
+				</div>
+				<h5 class="regular muted" lang="en">MEIG team</h5>
+				<h5 class="regular muted" lang="fr">équipe MEIG</h5>
+				<div class="list-group" id="intern-meig">
+					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
+					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
+				</div>
+				<h5 class="regular muted" lang="en">STRUDEL team</h5>
+				<h5 class="regular muted" lang="fr">équipe STRUDEL</h5>
+				<div class="list-group" id="intern-strudel">
+					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
+					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
+				</div>
+				<h5 class="regular muted" lang="en">GEOVIS team</h5>
+				<h5 class="regular muted" lang="fr">équipe GEOVIS</h5>
+				<div class="list-group" id="intern-geovis">
+					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
+					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
 				</div>
 			</div>
 	</section>
@@ -252,8 +282,10 @@
 	<section id="people" class="section gray-bg">
 		<div class="container" id="people-container">
 			<div class="row title text-center">
-				<h2 class="margin-top">People</h2>
-				<h4 class="light muted">Members of LASTIG</h4>
+				<h2 class="margin-top" lang="en">People</h2>
+				<h4 class="light muted" lang="en">Members of LASTIG</h4>
+				<h2 class="margin-top" lang="fr">Personnels</h2>
+				<h4 class="light muted" lang="fr">Membres du LASTIG</h4>
 			</div>
 		</div>
 	</section>
@@ -286,14 +318,13 @@
 		<a href="#" class="close-link"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Scripts -->
-	<script src="js/hal.js"></script>
-	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/typewriter.js"></script>
 	<script src="js/jquery.onepagenav.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

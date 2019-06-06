@@ -6,7 +6,7 @@
 
   function typewriter() {
 
-    // Globals 
+    // Globals
     var self = this, speed;
 
     function init(element, options) {
@@ -30,8 +30,8 @@
       // self.animation = setInterval(function(){animate_calification()}, 20);
     }
 
-    
-    
+
+
     // Metodos publicos
     return {
       init: init
@@ -48,7 +48,8 @@
   };
 
   $.fn.typewriter.options = {
-    'speed' : 300
+    'speed' : 400,
+    'lang' : 'en'
   };
 
 })(jQuery, window, document);

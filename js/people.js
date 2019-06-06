@@ -21,21 +21,32 @@
 // THE SOFTWARE.
 
 // this file contains functions to handle the people.csv file of the members of LASTIG
-	function parseCSVfile() {
-    var data = Papa.parse("https://raw.githubusercontent.com/umrlastig/lastig_data/master/people.csv", {
-                  download: true,
-                  header: true,
-                  step: function(row) {
-                      console.log("Row:", row.data);
-											if(row.data[0].firstname.localeCompare("") != 0){
-												var parent = document.getElementById("people-container");
-												divForAllPeople(parent, row.data);}
-                  },
-                  complete: function() {
-                      console.log("All done!");
-                  }
-              });
-    return data;
+	function parsePeopleCSVfile() {
+		var request = new XMLHttpRequest();
+
+		// Open a new connection, using the GET request on the URL endpoint
+		var url = "https://raw.githubusercontent.com/umrlastig/lastig_data/master/people.csv";
+		request.open('GET', url, true);
+		request.onload = function () {
+			var data = Papa.parse(this.response, {
+										download: false,
+										header: true,
+										step: function(row) {
+												//console.log("Row:", row.data);
+												if(row.data[0].firstname.localeCompare("") != 0){
+													var parent = document.getElementById("people-container");
+													divForAllPeople(parent, row.data);}
+										},
+										complete: function() {
+												console.log("All done!");
+										}
+								});
+			return data;
+		};
+
+		request.send();
+
+
   };
 
   function divForAllPeople(parentElement, data) {
@@ -66,6 +77,5 @@
   };
 
 	var displayPeople = function(){
-    console.log("test")
-		var data = parseCSVfile();
+    var data = parsePeopleCSVfile();
 };

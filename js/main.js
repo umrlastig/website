@@ -6,7 +6,7 @@ jQuery(function($) {
 	var ratio = 2;
 
 	// Window Load
-	$(window).load(function() {
+	$(window).on('load', function() {
 		// Preloader
 		$('.intro-tables, .parallax, header').css('opacity', '0');
 		$('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
@@ -51,8 +51,9 @@ jQuery(function($) {
 		$('nav.navbar-fixed-top .navbar-brand img').attr('src', $('nav.navbar-fixed-top .navbar-brand img').data("active-url"));
 
 		// Typing Intro Init
-		$(".typed").typewriter({
-			speed: 60
+
+		$('.typed:first').typewriter({
+			speed: 70
 		});
 
 		// Popup Form Init
@@ -171,8 +172,13 @@ jQuery(function($) {
 	});
 
 	// language
+	$(function() {
+  $('#toggle-event').change(function() {
+     document.body.className = $(this).data($(this).prop("checked").toString());
+  	});
+	});
 // Hide Language En when the web page loads
-$('.lang-fr').hide();
+/*$('.lang-fr').hide();
 $('.selectpicker').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
 	if(previousValue == 'English'){
 		// find all content with .lang-en under the div post-content and hide it
@@ -186,5 +192,5 @@ $('.selectpicker').on('changed.bs.select', function (e, clickedIndex, isSelected
 			// find all content with .lang-en under the div post-content and show it
 				$('.lang-en').show();});
 	}
-});
+});*/
 });
