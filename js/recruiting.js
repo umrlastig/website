@@ -116,23 +116,27 @@
 
 		const childElement = document.createElement('a');
 		const appendChildElement = parentElement.appendChild(childElement);
-		appendChildElement.setAttribute("class","list-group-item list-group-item-info lang-fr");
+		appendChildElement.setAttribute("class","list-group-item list-group-item-info");
 		appendChildElement.setAttribute("href", data[0].pdf);
+		appendChildElement.setAttribute("lang", "fr");
 		appendChildElement.innerHTML = data[0].titre+"  ";
 		const childElementEn = document.createElement('a');
 		const appendChildElementEn = parentElement.appendChild(childElementEn);
-		appendChildElementEn.setAttribute("class","list-group-item list-group-item-info lang-en");
+		appendChildElementEn.setAttribute("class","list-group-item list-group-item-info");
 		appendChildElementEn.setAttribute("href", data[0].pdf);
+		appendChildElementEn.setAttribute("lang", "en");
 		appendChildElementEn.innerHTML = data[0].title+"  ";
 
 		if(data[0].filled == "true"){
 			const filledElementEn = document.createElement('span');
 			filledElementEn.innerHTML = "filled offer";
-			filledElementEn.setAttribute("class","label label-success lang-en");
+			filledElementEn.setAttribute("class","label label-success");
+			filledElementEn.setAttribute("lang","en");
 			appendChildElementEn.appendChild(filledElementEn);
 			const filledElement = document.createElement('span');
 			filledElement.innerHTML = "offre pourvue";
-			filledElement.setAttribute("class","label label-success lang-fr");
+			filledElement.setAttribute("class","label label-success");
+			filledElement.setAttribute("lang","fr");
 			appendChildElement.appendChild(filledElement);
 		}
 		//appendChildElement.innerHTML = data[0].status;
