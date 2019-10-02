@@ -1223,3 +1223,30 @@ body.fr :lang(en){
 .flag-icon-us {
   background-image: url('../img/icons/us.svg');
 }
+
+
+/* Members */
+.img-member{
+  width:100px;
+  height:100px;
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+  width:100px;
+  height:100px
+}
+
+.people{
+  display: inline-block;
+	height:200px;
+}
+
+.text-status{
+  font-size: 95%;
+}

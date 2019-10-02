@@ -52,10 +52,10 @@
   function divForAllPeople(parentElement, data) {
 		const childElement = document.createElement('div');
     const appendChildElement = parentElement.appendChild(childElement);
-    appendChildElement.setAttribute("class","col-lg-2 col-md-6 mb-lg-0 mb-5");
+    appendChildElement.setAttribute("class","people col-lg-2 col-md-6 mb-lg-0 mb-5");
     avatarDivElement = document.createElement('div');
     const appendAvatarDivElement = appendChildElement.appendChild(avatarDivElement);
-    appendAvatarDivElement.setAttribute("class","avatar mx-auto");
+    appendAvatarDivElement.setAttribute("class","avatar mx-auto img-member");
 		imgElement = document.createElement('img');
     imgElement.setAttribute("class","rounded-circle z-depth-1");
 		imgElement.setAttribute("src",data[0].photo);
@@ -71,7 +71,7 @@
     appendChildElement.appendChild(aElement);
     statusElement = document.createElement('p');
     statusElement.innerHTML = data[0].status;
-    statusElement.setAttribute("class","text blue-text");
+    statusElement.setAttribute("class","text blue-text text-status");
     appendChildElement.appendChild(statusElement);
     //appendChildElement.innerHTML = data[0].status;
   };
