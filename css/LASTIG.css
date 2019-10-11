@@ -731,7 +731,7 @@ img {
 
 footer {
 	padding: 140px 0 40px;
-	background: url('../img/footer.jpg');
+	background: url('../img/fond_jumbotron.png');
 	-webkit-background-size: cover;
 	background-size: cover;
 }
