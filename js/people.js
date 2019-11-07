@@ -63,7 +63,7 @@
 		appendImgElement = appendAvatarDivElement.appendChild(imgElement);
 
 		aElement = document.createElement('a');
-		aElement.setAttribute("href", "https://umrlastig.github.io/"+data[0].webpage);
+		aElement.setAttribute("href", data[0].webpage);
 		nameElement = document.createElement('h5');
     nameElement.innerHTML = data[0].firstname +" "+ data[0].lastname;
 		nameElement.setAttribute("class","font-weight-bold mt-4 mb-3");
