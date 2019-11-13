@@ -39,8 +39,8 @@ body {
 
 .preloader img {
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 25%;
+	left: 25%;
 	width: 50%;
 	height: 50%;
 }
