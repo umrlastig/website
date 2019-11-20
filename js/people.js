@@ -39,7 +39,8 @@
 										},
 										complete: function() {
 												console.log("All done!");
-										}
+										},
+										worker: true
 								});
 			return data;
 		};

@@ -31,6 +31,7 @@
 			var data = Papa.parse(this.response, {
 										download: false,
 										header: true,
+										worker: true,
 										step: function(row) {
 												//console.log("Row:", row.data);
 												if(row.data[0].type != ""){
