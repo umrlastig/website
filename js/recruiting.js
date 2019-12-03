@@ -22,13 +22,14 @@
 
 // this file contains functions to handle the people.csv file of the members of LASTIG
 	function parseCSVfile() {
-		var request = new XMLHttpRequest();
-
-		// Open a new connection, using the GET request on the URL endpoint
 		var url = "https://raw.githubusercontent.com/umrlastig/lastig_data/master/recruiting.csv";
-		request.open('GET', url, true);
-		request.onload = function () {
-			var data = Papa.parse(this.response, {
+		var myInit = { method: 'GET'};
+		fetch(url,myInit)
+		.then(function(response) {
+			return response.ok ? response.text() : Promise.reject(response.status);
+		})
+		.then(function(text) {
+			var data = Papa.parse(text, {
 										download: false,
 										header: true,
 										worker: true,
@@ -64,15 +65,11 @@
 												}
 										},
 										complete: function() {
-												console.log("All done!");
+												console.log("display offers done!");
 										}
 								});
 			return data;
-		};
-
-		request.send();
-
-
+		});
   };
 
   function divForPhD(parentElement, data) {
