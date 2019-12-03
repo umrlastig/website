@@ -22,31 +22,52 @@
 
 // this file contains functions to handle the people.csv file of the members of LASTIG
 	function parsePeopleCSVfile() {
-		var request = new XMLHttpRequest();
+		//var request = new XMLHttpRequest();
 
 		// Open a new connection, using the GET request on the URL endpoint
 		var url = "https://raw.githubusercontent.com/umrlastig/lastig_data/master/people.csv";
-		request.open('GET', url, true);
-		request.onload = function () {
-			var data = Papa.parse(this.response, {
-										download: false,
-										header: true,
-										step: function(row) {
-												//console.log("Row:", row.data);
-												if(row.data[0].firstname.localeCompare("") != 0){
-													var parent = document.getElementById("people-container");
-													divForAllPeople(parent, row.data);}
-										},
-										complete: function() {
-												console.log("All done!");
-										},
-										worker: true
-								});
+		//request.open('GET', url, true);
+		//request.onload = function () {
+		//	var data = Papa.parse(this.response, {
+		//								download: false,
+		//								header: true,
+		//								step: function(row) {
+		//										//console.log("Row:", row.data);
+		//										if(row.data[0].firstname.localeCompare("") != 0){
+		//											var parent = document.getElementById("people-container");
+		//											divForAllPeople(parent, row.data);}
+		//								},
+		//								complete: function() {
+		//										console.log("All done!");
+		//								},
+		//								worker: true
+		//						});
+		//	return data;
+		//};
+
+		//request.send();
+		var myInit = { method: 'GET'};
+		fetch(url,myInit)
+		.then(function(response) {
+			return response.ok ? response.text() : Promise.reject(response.status);
+		})
+		.then(function(text) {
+			console.log(text);
+			var data = Papa.parse(text, {
+				download: false,
+				header: true,
+				step: function(row) {
+					if(row.data[0].firstname.localeCompare("") != 0){
+						var parent = document.getElementById("people-container");
+						divForAllPeople(parent, row.data);}
+					},
+				complete: function() {
+					console.log("All done!");
+					},
+					worker: true
+				});
 			return data;
-		};
-
-		request.send();
-
+		});
 
   };
 
