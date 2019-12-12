@@ -115,13 +115,13 @@
 		const childElement = document.createElement('a');
 		const appendChildElement = parentElement.appendChild(childElement);
 		appendChildElement.setAttribute("class","list-group-item list-group-item-info");
-		appendChildElement.setAttribute("href", data[0].pdf);
+		appendChildElement.setAttribute("href", data[0].pdf_fr);
 		appendChildElement.setAttribute("lang", "fr");
 		appendChildElement.innerHTML = data[0].titre+"  ";
 		const childElementEn = document.createElement('a');
 		const appendChildElementEn = parentElement.appendChild(childElementEn);
 		appendChildElementEn.setAttribute("class","list-group-item list-group-item-info");
-		appendChildElementEn.setAttribute("href", data[0].pdf);
+		appendChildElementEn.setAttribute("href", data[0].pdf_en);
 		appendChildElementEn.setAttribute("lang", "en");
 		appendChildElementEn.innerHTML = data[0].title+"  ";
 
