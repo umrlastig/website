@@ -2,142 +2,96 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>LASTIG</title>
-	<meta name="description" content="Website of the LASTIG lab" />
-	<meta name="keywords" content="LASTIG, lab, IGN, geographic information, science, cartography, remote sensing, photogrammetry" />
-	<meta name="author" content="Guillaume Touya" />
-	<!-- Favicons (created with http://realfavicongenerator.net/)-->
-	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
-	<link rel="manifest" href="img/favicons/manifest.json">
-	<link rel="shortcut icon" href="img/favicons/favicon.ico">
-	<meta name="msapplication-TileColor" content="#00a8ff">
-	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-	<!-- Normalize -->
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<!-- Owl -->
-	<link rel="stylesheet" type="text/css" href="css/owl.css">
-	<!-- Animate.css -->
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
-	<!-- Elegant Icons -->
-	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
-	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
-	<!-- Main style -->
-	<link rel="stylesheet" type="text/css" href="css/LASTIG.css">
-	<script src="js/papaparse.min.js"></script>
-	<script src="js/people.js"></script>
-	<script src="js/recruiting.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>LASTIG</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.css" rel="stylesheet">
+  <link href="css/bootstrap-toggle.min.css" rel="stylesheet">
+  <script src="js/papaparse.min.js"></script>
+  <script src="js/people.js"></script>
+  <script src="js/recruiting.js"></script>
+
 </head>
 
-<body onload="displayPeople();displayRecruiting();" class="en">
-	<!--div class="preloader">
-		<img src="img/preloader_LaSTIG.gif" alt="Preloader image">
-	</div-->
-	<nav class="navbar">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<!--a class="navbar-brand" href="#"><img src="img/lastig_logo_small.png" data-active-url="img/lastig_logo_small.png" alt=""></a-->
-				<!--select class="selectpicker" data-width="fit" data-size="2">
-					<option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
-					<option  data-content='<span class="flag-icon flag-icon-fr"></span> Français'>Français</option>
-				</select-->
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-center main-nav">
-					<li>
-						<a href="#intro" lang="en">Home</a>
-						<a href="#intro" lang="fr">Accueil</a>
-					</li>
-					<li>
-						<a href="#about" lang="en">About</a>
-						<a href="#about" lang="fr">Présentation</a>
-					</li>
-					<li>
-						<a href="#news" lang="en">News</a>
-						<a href="#news" lang="fr">Actualités</a>
-					</li>
-					<li>
-						<a href="#teams" lang="en">Teams</a>
-						<a href="#teams" lang="fr">Equipes</a>
-					</li>
-					<li>
-						<a href="#recruiting" lang="en">Recruiting</a>
-						<a href="#recruiting" lang="fr">Offres</a>
-					</li>
-					<li>
-						<a href="#people" lang="en">People</a>
-						<a href="#people" lang="fr">Personnel</a>
-					</li>
-					<!--li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li-->
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-	<header id="intro">
-		<div class="container">
-			<div class="table">
-				<div class="header-text">
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<div align="center">
-							<a class="navbar-brand" href="#"><img width="100%" src="img/logo3_titre.png" data-active-url="img/logo2_titre.png" alt="Logo LaSTIG"></a><br>
-							</div>
-							<!--
-							<h3 class="light white">LASTIG</h3>
-							-->
-							<h1 class="white typed fr" lang="en">
-								Lab on Geographic Information Science for sustainable development and smart cities
-							</h1>
-							<h1 style="font-color:&AABBFF;" class="white typed fr" lang="en"><br>
-								<table border=1><tr><td>
-										<b>PAGE UNDER CONSTRUCTION</b>
-								</td></tr></table>
-							</h1>
-							<h1 class="white typed fr" lang="fr">
-								Laboratoire en sciences de l'information géographique pour la ville intelligente et les territoires durables
-							</h1>
-							<h1 style="font-color:&AABBFF;" class="white typed fr" lang="fr"><br>
-								<table border=1><tr><td>
-									<b>PAGE EN CONSTRUCTION</b>
-								</td></tr></table>
-							</h1>
-							<!--span class="typed-cursor">|</span-->
-						</div>
-					</div>
-					<div class="row">
-						<input id="toggle-event" type="checkbox" checked data-toggle="toggle" data-size="large" data-onstyle="info" data-offstyle="info" data-on="English" data-off="Français" data-true="en" data-false="fr" >
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+<body id="page-top" onload="displayPeople();displayRecruiting()" class="fr">
 
-	<section id="about" class="section section-padded">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">LASTIG</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="row">
+        <input id="toggle-event" type="checkbox" checked data-toggle="toggle" data-size="mini" data-onstyle="info" data-offstyle="info" data-on="English" data-off="Français" data-true="en" data-false="fr" >
+      </div>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#intro" lang="en">Home</a>
+						<a class="nav-link js-scroll-trigger" href="#intro" lang="fr">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#about" lang="en">About</a>
+						<a class="nav-link js-scroll-trigger" href="#about" lang="fr">Présentation</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#news" lang="en">News</a>
+						<a class="nav-link js-scroll-trigger" href="#news" lang="fr">Actualités</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#teams" lang="en">Teams</a>
+						<a class="nav-link js-scroll-trigger" href="#teams" lang="fr">Equipes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#recruiting" lang="en">Recruiting</a>
+						<a class="nav-link js-scroll-trigger" href="#recruiting" lang="fr">Offres</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link js-scroll-trigger" href="#people" lang="en">People</a>
+						<a class="nav-link js-scroll-trigger" href="#people" lang="fr">Personnel</a>
+					</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead" id="intro">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">LASTIG</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5" lang="en">Lab on Geographic Information Science for sustainable development and smart cities</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger" lang="en">Learn more</a>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5" lang="fr">Laboratoire en sciences de l'information géographique pour la ville intelligente et les territoires durables</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger" lang="fr">En savoir plus</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section section-padded">
 		<div class="container">
 			<div class="row text-center title">
+        <div class="col-lg-8 mx-auto mb-5">
 				<h2 lang="en">Presentation of the LASTIG</h2>
 				<h2 lang="fr">Présentation du LASTIG</h2>
+      	</div>
 			</div>
 			<div class="text-center pad-bot40">
 					<img src="img/lastig.jpeg" alt="lastig team"/>
@@ -171,190 +125,191 @@
 		</div>
 	</section>
 
-	<!--
-	<section id="news" class="section section-padded blue-bg">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="owl-twitter owl-carousel">
-						<div class="item text-center">
-							<i class="icon fa fa-twitter"></i>
-							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-							<h4 class="light-white light">#health #training #exercise</h4>
-						</div>
-						<div class="item text-center">
-							<i class="icon fa fa-twitter"></i>
-							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-							<h4 class="light-white light">#health #training #exercise</h4>
-						</div>
-						<div class="item text-center">
-							<i class="icon fa fa-twitter"></i>
-							<h4 class="white light">To enjoy the glow of good health, you must exercise.</h4>
-							<h4 class="light-white light">#health #training #exercise</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	-->
 
-	<section id="teams" class="section section-padded">
-		<div class="container">
-			<div class="row text-center title">
-				<h2 lang="en">Research teams</h2>
-				<h2 lang="fr">Equipes de recherche</h2>
-			</div>
-			<div class="row services">
-				<div class="col-md-3">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="img/icons/logo1_acte.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">ACTE</h4>
-						<p class="description" lang="en"><a href="https://umrlastig.github.io/acte/">Data Acquisition and Processing</a></p>
-						<p class="description" lang="fr"><a href="https://umrlastig.github.io/acte/">Acquisition et traitements</a></p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="img/icons/logo1_meig.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">MEIG</h4>
-						<p class="description" lang="en"><a href="https://umrlastig.github.io/meig/">Mediation and Enrichment of Geographic Information</a></p>
-						<p class="description" lang="fr"><a href="https://umrlastig.github.io/meig/">Médiation et enrichissement de l'information géographique</a></p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="img/icons/logo1_strudel.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">STRUDEL</h4>
-						<p class="description" lang="en"><a href="https://umrlastig.github.io/strudel/">Spatio-Temporal Structures for Spatial Analysis</a></p>
-						<p class="description" lang="fr"><a href="https://umrlastig.github.io/strudel/">Structures spatio-temporelles pour l’analyse des territoires</a></p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">
-						<div class="icon-holder">
-							<img src="img/icons/logo1_geovis.png" alt="" class="icon">
-						</div>
-						<h4 class="heading">GEOVIS</h4>
-						<p class="description" lang="en"><a href="https://umrlastig.github.io/geovis/">Geovisualisation, Interaction, and Immersion</a></p>
-						<p class="description" lang="fr"><a href="https://umrlastig.github.io/geovis/">Géovisualisation, interaction, et immersion</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="cut cut-bottom"></div>
-	</section>
+  	<section id="teams" class="section section-padded">
+  		<div class="container">
+  			<div class="row text-center title">
+          <div class="col-lg-8 mx-auto mb-5">
+  				<h2 lang="en">Research teams</h2>
+  				<h2 lang="fr">Equipes de recherche</h2>
+          </div>
+  			</div>
+  			<div class="row services">
+  				<div class="col-md-3">
+  					<div class="service">
+  						<div class="icon-holder">
+  							<img src="img/icons/logo1_acte.png" alt="" class="icon">
+  						</div>
+  						<h4 class="heading">ACTE</h4>
+  						<p class="description" lang="en"><a href="https://umrlastig.github.io/acte/">Data Acquisition and Processing</a></p>
+  						<p class="description" lang="fr"><a href="https://umrlastig.github.io/acte/">Acquisition et traitements</a></p>
+  					</div>
+  				</div>
+  				<div class="col-md-3">
+  					<div class="service">
+  						<div class="icon-holder">
+  							<img src="img/icons/logo1_meig.png" alt="" class="icon">
+  						</div>
+  						<h4 class="heading">MEIG</h4>
+  						<p class="description" lang="en"><a href="https://umrlastig.github.io/meig/">Mediation and Enrichment of Geographic Information</a></p>
+  						<p class="description" lang="fr"><a href="https://umrlastig.github.io/meig/">Médiation et enrichissement de l'information géographique</a></p>
+  					</div>
+  				</div>
+  				<div class="col-md-3">
+  					<div class="service">
+  						<div class="icon-holder">
+  							<img src="img/icons/logo1_strudel.png" alt="" class="icon">
+  						</div>
+  						<h4 class="heading">STRUDEL</h4>
+  						<p class="description" lang="en"><a href="https://umrlastig.github.io/strudel/">Spatio-Temporal Structures for Spatial Analysis</a></p>
+  						<p class="description" lang="fr"><a href="https://umrlastig.github.io/strudel/">Structures spatio-temporelles pour l’analyse des territoires</a></p>
+  					</div>
+  				</div>
+  				<div class="col-md-3">
+  					<div class="service">
+  						<div class="icon-holder">
+  							<img src="img/icons/logo1_geovis.png" alt="" class="icon">
+  						</div>
+  						<h4 class="heading">GEOVIS</h4>
+  						<p class="description" lang="en"><a href="https://umrlastig.github.io/geovis/">Geovisualisation, Interaction, and Immersion</a></p>
+  						<p class="description" lang="fr"><a href="https://umrlastig.github.io/geovis/">Géovisualisation, interaction, et immersion</a></p>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="cut cut-bottom"></div>
+  	</section>
 
-	<section id="recruiting" class="section gray-bg">
-		<div class="container">
-			<div class="row title text-center">
-				<h2 class="margin-top" lang="en">Recruiting</h2>
-				<h4 class="light muted" lang="en">Job offers (PhD, post-doc, internship, permanent position)</h4>
-				<h2 class="margin-top" lang="fr">Offres d'emploi</h2>
-				<h4 class="light muted" lang="fr">Offres d'emploi (thèse, post-doc, stage, poste permanent)</h4>
-			</div>
+  	<section id="recruiting" class="section gray-bg">
+  		<div class="container">
+  			<div class="row title text-center">
+          <div class="col-lg-8 mx-auto">
+  				      <h2 class="margin-top" lang="en">Recruiting</h2>
+  				      <h4 class="mt-2 mb-5" lang="en">Job offers (PhD, post-doc, internship, permanent position)</h4>
+  				      <h2 class="margin-top" lang="fr">Offres d'emploi</h2>
+  				      <h4 class="mt-2 mb-5" lang="fr">Offres d'emploi (thèse, post-doc, stage, poste permanent)</h4>
+          </div>
+        </div>
 
-			<div class="row">
-				<div class="row title text-center">
-					<h3 class="light muted" lang="en">PhD offers</h3>
-					<h3 class="light muted" lang="fr">Thèses</h3>
-					<!--h5 class="light muted">no post-doc offer at the moment)</h5!-->
-				</div>
-				<div class="list-group" id="phd-offers">
-					<h5 class="light muted" lang="en">no PhD offer at the moment</h5>
-					<h5 class="light muted" lang="fr">aucune offre de thèse en ce moment</h5>
-    		</div>
-				<div class="row title text-center" id="postdoc-offers">
-					<h3 class="light muted" lang="en">Post-doc positions</h3>
-					<h3 class="light muted" lang="fr">Post-doc</h3>
-					<h5 class="light muted" lang="en">no PhD post-doc at the moment</h5>
-					<h5 class="light muted" lang="fr">aucune offre de post-doc en ce moment</h5>
-				</div>
-				<div class="row title text-center">
-					<h3 class="light muted" lang="en">Internships</h3>
-					<h3 class="light muted" lang="fr">Stages</h3>
-					<!--h5 class="light muted">no post-doc offer at the moment</h5!-->
-				</div>
-				<h5 class="regular muted" lang="en">ACTE team</h5>
-				<h5 class="regular muted" lang="fr">équipe ACTE</h5>
-				<div class="list-group" id="intern-acte">
-					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
-					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
-				</div>
-				<h5 class="regular muted" lang="en">MEIG team</h5>
-				<h5 class="regular muted" lang="fr">équipe MEIG</h5>
-				<div class="list-group" id="intern-meig">
-					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
-					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
-				</div>
-				<h5 class="regular muted" lang="en">STRUDEL team</h5>
-				<h5 class="regular muted" lang="fr">équipe STRUDEL</h5>
-				<div class="list-group" id="intern-strudel">
-					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
-					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
-				</div>
-				<h5 class="regular muted" lang="en">GEOVIS team</h5>
-				<h5 class="regular muted" lang="fr">équipe GEOVIS</h5>
-				<div class="list-group" id="intern-geovis">
-					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
-					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
-				</div>
-			</div>
-	</section>
+  			<div class="row title text-center">
+            <div class="col-lg-8 mx-auto">
+  					<h3 class="mt-2 mb-5" lang="en">PhD offers</h3>
+  					<h3 class="mt-2 mb-5" lang="fr">Thèses</h3>
+  					</div>
+  				</div>
+  				<div class="row list-group" id="phd-offers">
+  					<h5 class="mt-2 mb-5" lang="en">no PhD offer at the moment</h5>
+  					<h5 class="mt-2 mb-5" lang="fr">aucune offre de thèse en ce moment</h5>
+      		</div>
+  				<div class="row title text-center" id="postdoc-offers">
+            <div class="col-lg-8 mx-auto">
+  					<h3 class="mt-2 mb-5" lang="en">Post-doc positions</h3>
+  					<h3 class="mt-2 mb-5" lang="fr">Post-doc</h3>
+            </div>
+          </div>
+          <div class="row list-group" id="postdoc-offers">
+  					<h5 class="mt-2 mb-5" lang="en">no PhD post-doc at the moment</h5>
+  					<h5 class="mt-2 mb-5" lang="fr">aucune offre de post-doc en ce moment</h5>
+  				</div>
+  				<div class="row title text-center">
+            <div class="col-lg-8 mx-auto">
+  					<h3 class="mt-2 mb-5" lang="en">Internships</h3>
+  					<h3 class="mt-2 mb-5" lang="fr">Stages</h3>
+  					</div>
+  				</div>
+  				<h5 class="mt-2 mb-2" lang="en">ACTE team</h5>
+  				<h5 class="mt-2 mb-2" lang="fr">équipe ACTE</h5>
+  				<div class="list-group" id="intern-acte">
+  					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
+  					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
+  				</div>
+  				<h5 class="mt-2 mb-2" lang="en">MEIG team</h5>
+  				<h5 class="mt-2 mb-2" lang="fr">équipe MEIG</h5>
+  				<div class="list-group" id="intern-meig">
+  					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
+  					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
+  				</div>
+  				<h5 class="mt-2 mb-2" lang="en">STRUDEL team</h5>
+  				<h5 class="mt-2 mb-2" lang="fr">équipe STRUDEL</h5>
+  				<div class="list-group" id="intern-strudel">
+  					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
+  					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
+  				</div>
+  				<h5 class="mt-2 mb-2" lang="en">GEOVIS team</h5>
+  				<h5 class="mt-2 mb-2" lang="fr">équipe GEOVIS</h5>
+  				<div class="list-group" id="intern-geovis">
+  					<h5 class="light muted" lang="en">no internship offer in this team at the moment</h5>
+  					<h5 class="light muted" lang="fr">aucune offre dans cette équipe en ce moment</h5>
+  				</div>
+  	</section>
 
-	<section id="people" class="section gray-bg">
-		<div class="container" id="people-container">
-			<div class="row title text-center">
-				<h2 class="margin-top" lang="en">People</h2>
-				<h4 class="light muted" lang="en">Members of LASTIG</h4>
-				<h2 class="margin-top" lang="fr">Personnels</h2>
-				<h4 class="light muted" lang="fr">Membres du LASTIG</h4>
-			</div>
-		</div>
-	</section>
 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<img src="img/icons/logo_ign.png" class="col-md-2" alt="...">
-				<img src="img/icons/logo_upem.png" class="col-md-2" alt="...">
-				<img src="img/icons/logo_eivp.png" class="col-md-2" alt="...">
-			</div>
-			<div class="row bottom-footer text-center-mobile">
-				<div class="col-sm-8">
-					<p>&copy; IGN CC BY-SA</a></p>
-				</div>
-				<div class="col-sm-4 text-right text-center-mobile">
-					<ul class="social-footer">
-						<li><a href="https://www.youtube.com/channel/UCpVokwKUh9S4pqZ4cd-GTCQ"><i class="fa fa-youtube"></i></a></li>
-						<li><a href=""><i class="fa fa-twitter"></i></a></li>
-						<li><a href=""><i class="fa fa-google-plus"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Holder for mobile navigation -->
-	<div class="mobile-nav">
-		<ul>
-		</ul>
-		<a href="#" class="close-link"><i class="arrow_up"></i></a>
-	</div>
-	<!-- Scripts -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/typewriter.js"></script>
-	<script src="js/jquery.onepagenav.js"></script>
-	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-	<script src="js/main.js"></script>
+  <section id="people" class="section gray-bg">
+  		<div class="container" id="people-container">
+  			<div class="row title text-center">
+          <div class="col-lg-8 mx-auto">
+  				      <h2 class="margin-top" lang="en">People</h2>
+  				    <h2 class="margin-top" lang="fr">Personnels du LASTIG</h2>
+          </div>
+  			</div>
+  		</div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section class="contact-section bg-black">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Address</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">73 Avenue de Paris, 94165 Saint-Mandé</div>
+              <div class="small text-black-50">6-8 Avenue Blaise Pascal, 77420 Champs-sur-Marne</div>
+              <div class="small text-black-50">80 Rue Rebeval, 75019 Paris</div>
+            </div>
+          </div>
+        </div>
+        <img src="img/icons/logo_ign.png" class="col-md-3" alt="...">
+        <img src="img/icons/logo_upem.png" class="col-md-3" alt="...">
+        <img src="img/icons/logo_eivp.png" class="col-md-3" alt="...">
+      </div>
+
+      <div class="social d-flex justify-content-center">
+        <a href="https://www.youtube.com/channel/UCpVokwKUh9S4pqZ4cd-GTCQ" class="mx-2">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://github.com/IGNF" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      <p>&copy; IGN CC BY-SA</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <!--script src="vendor/jquery/jquery.min.js"></script-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/main.js"></script>
+  <script src="js/grayscale.js"></script>
+  <script src="js/bootstrap-toggle.min.js"></script>
 </body>
 
 </html>
