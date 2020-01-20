@@ -117,7 +117,7 @@ ul.white-list li:before {
 	background: white;
 }
 
-header {
+/*header {
 	position: relative;
 	width: 100%;
 	color: white;
@@ -165,40 +165,10 @@ a {
 	color: #00a8ff;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
-}
+}*/
 
 
-/* Navigation Bar ( Navbar ) */
 
-nav.navbar {
-	position: absolute;
-	z-index: 9500;
-	width: 100%;
-	width: 100vw;
-	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
-
-nav.navbar .navbar-nav li.active a:not(.btn) {
-	color: #00a8ff !important;
-}
-
-nav.navbar-fixed-top {
-	z-index: 9499;
-	top: 0;
-	padding: 25px 0;
-	opacity: 0;
-	background: white;
-	box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
-}
-
-nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
-	color: #bbb;
-}
-
-.icon-bar {
-	background: #bbb;
-}
 /* Buttons */
 
 .btn {
@@ -625,106 +595,6 @@ img {
 .team .title {
 	margin: 50px 0;
 }
-/* Pricing */
-
-#pricing {
-	background: #00a8ff url('../img/pricing1.jpg') no-repeat center center;
-	-webkit-background-size: cover;
-	background-size: cover;
-	-webkit-transition: background-image 0.6s linear 0.3s;
-	transition: background-image 0.6s linear 0.3s;
-}
-
-.owl-pricing img {
-	width: 100%;
-}
-
-.owl-pricing,
-.pricings {
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
-
-.pricing {
-	position: relative;
-	width: 100%;
-}
-
-.pricings .pricing .box-main,
-.pricings .pricing .box-second {
-	position: relative;
-	left: 25%;
-	display: inline-block;
-	width: 50%;
-	height: 300px;
-	padding: 50px 40px;
-	background: #bbb;
-	-webkit-transition: -webkit-transform 0.3s, background-image 0.3s, opacity 0.3s;
-	transition: transform 0.3s, background-image 0.3s, opacity 0.3s;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.pricings .pricing .box-main {
-	z-index: 10;
-	padding-top: 40px;
-}
-
-.pricings .pricing .box-main:not(.active) {
-	cursor: pointer;
-}
-
-.pricings .pricing .box-main .info-icon {
-	font-size: 14px;
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	pointer-events: none;
-	opacity: 0;
-	color: #fff;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-}
-
-.pricings .pricing .box-main:not(.active) .info-icon {
-	opacity: 1;
-	-webkit-transition-delay: 0.2s;
-	transition-delay: 0.2s;
-}
-
-.pricings .pricing .box-main:not(.active):hover {
-	background: #afafaf;
-}
-
-.pricings .pricing .box-main.active {
-	background: #00a8ff;
-	-webkit-transform: translateX(-99%);
-	-ms-transform: translateX(-99%);
-	transform: translateX(-99%);
-}
-
-.pricings .pricing .box-second {
-	position: absolute;
-	top: 0;
-	right: 0% !important;
-	left: auto;
-	opacity: 0;
-	background: #afafaf;
-}
-
-.pricings .pricing .box-second.active {
-	opacity: 1;
-	background: #00a8ff;
-}
-
-.pricings .pricing.active .box-main,
-.pricings .pricing .box-second {
-	background: #00a8ff;
-}
-
-.pricings .pricing .box-main a.btn {
-	margin-top: 50px;
-}
 
 .owl-twitter i.icon {
 	font-size: 36px;
@@ -1134,61 +1004,6 @@ footer .social-footer li:hover a {
 	}
 }
 
-/* Media Queries */
-
-@media(max-width:991px) {
-	.text-center-mobile {
-		text-align: center !important;
-	}
-}
-
-@media(max-width: 768px) {
-	.pricing {
-		margin-bottom: 30px;
-	}
-	.pricings .pricing .info-icon {
-		display: none;
-	}
-	.pricings .pricing .box-main,
-	.pricings .pricing .box-second {
-		left: 0;
-		width: 100%;
-		padding: 50px 50px 0;
-		text-align: left;
-		background: #00a8ff;
-	}
-	.pricings .pricing .box-main.active {
-		background: #00a8ff;
-		-webkit-transform: translateX(0%);
-		-ms-transform: translateX(0%);
-		transform: translateX(0%);
-	}
-	.pricings .pricing .box-second {
-		position: relative;
-		opacity: 1;
-	}
-	.popup-form {
-		width: 100%;
-		margin: 60px auto;
-	}
-	.modal {
-		padding: 0 10px !important;
-	}
-	.popup-form .form-control:not(.dropdown):focus {
-		position: relative;
-		padding-right: 30px;
-		padding-left: 30px;
-	}
-}
-
-@media(max-width: 400px) {
-	header .typed-cursor {
-		display: none;
-	}
-	.pricings .pricing .box-second {
-		padding-top: 0;
-	}
-}
 
 /* ==========================
  --- Language ---
