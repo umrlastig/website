@@ -72,13 +72,11 @@
     appendChildElement.appendChild(aElement);
     statusElement = document.createElement('p');
     statusElement.innerHTML = data[0].status;
-    statusElement.setAttribute("class","text blue-text text-status");
-		statusElement.setAttribute("lang","en");
+    statusElement.setAttribute("class","text blue-text text-status lang-en");
     appendChildElement.appendChild(statusElement);
 		statutElement = document.createElement('p');
 		statutElement.innerHTML = data[0].statut;
-		statutElement.setAttribute("class","text blue-text text-status");
-		statutElement.setAttribute("lang","fr");
+		statutElement.setAttribute("class","text blue-text text-status lang-fr");
 		appendChildElement.appendChild(statutElement);
     //appendChildElement.innerHTML = data[0].status;
   };
