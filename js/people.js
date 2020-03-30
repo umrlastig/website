@@ -23,7 +23,7 @@
 // this file contains functions to handle the people.csv file of the members of LASTIG
 	function parsePeopleCSVfile() {
 		// Open a new connection, using the GET request on the URL endpoint
-		var url = "https://raw.githubusercontent.com/umrlastig/lastig_data/master/people.csv";
+		var url = "/lastig_data/people.csv";
 
 		var myInit = { method: 'GET'};
 		fetch(url,myInit)
@@ -45,8 +45,8 @@
 					worker: true
 				});
 			return data;
-		});
-
+		})
+	        .then(function() { $("select-lang").selectpicker(); });
   };
 
   function divForAllPeople(parentElement, data) {
