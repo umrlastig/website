@@ -38,7 +38,7 @@ function parseCSVfile() {
 				if(row.data[0].type != ""){
 					if(row.data[0].type == "EC"){
 						var parent = document.getElementById("ec-offers");
-						divForPhD(parent, row.data);
+						divForJob(parent, row.data);
 					}
 					else if(row.data[0].type == "PhD"){
 						var parent = document.getElementById("phd-offers");
