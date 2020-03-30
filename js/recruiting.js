@@ -74,7 +74,7 @@ function parseCSVfile() {
 		});
 		return data;
 	})
-	.then(function() { document.getElementById("select-lang").selectpicker(); });
+	.then(function() { $("select-lang").selectpicker(); });
   };
 
 function divForJob(parentElement, data) {
