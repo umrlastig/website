@@ -29,7 +29,6 @@ function parseCSVfile() {
 		return response.ok ? response.text() : Promise.reject(response.status);
 	})
 	.then(function(text) {
-		var lang = document.getElementById('select-lang').selectedIndex;
 		var data = Papa.parse(text, {
 			download: false,
 			header: true,
@@ -39,32 +38,32 @@ function parseCSVfile() {
 				if(row.data[0].type != ""){
 					if(row.data[0].type == "EC"){
 						var parent = document.getElementById("ec-offers");
-						divForJob(parent, row.data, lang);
+						divForJob(parent, row.data);
 					}
 					else if(row.data[0].type == "PhD"){
 						var parent = document.getElementById("phd-offers");
-						divForJob(parent, row.data, lang);
+						divForJob(parent, row.data);
 					}
 					else if(row.data[0].type == "postdoc"){
 						var parent = document.getElementById("postdoc-offers");
-						divForJob(parent, row.data, lang);
+						divForJob(parent, row.data);
 					}
 					else{
 						if(row.data[0].team == "ACTE"){
 							var parent = document.getElementById("intern-acte");
-							divForJob(parent, row.data, lang);
+							divForJob(parent, row.data);
 						}
 						else if(row.data[0].team == "MEIG"){
 							var parent = document.getElementById("intern-meig");
-							divForJob(parent, row.data, lang);
+							divForJob(parent, row.data);
 						}
 						else if(row.data[0].team == "STRUDEL"){
 							var parent = document.getElementById("intern-strudel");
-							divForJob(parent, row.data, lang);
+							divForJob(parent, row.data);
 						}
 						else if(row.data[0].team == "GEOVIS"){
 							var parent = document.getElementById("intern-geovis");
-							divForJob(parent, row.data, lang);
+							divForJob(parent, row.data);
 						}
 					}
 				}
@@ -74,10 +73,15 @@ function parseCSVfile() {
 			}
 		});
 		return data;
+	})
+	.then(function () {
+                var lang = document.getElementById('select-lang').selectedIndex;
+		var classes = [".lang-fr", ".lang-en"];
+		$( classes[lang] ).hide();
 	});
   };
 
-function divForJob(parentElement, data, lang) {
+function divForJob(parentElement, data) {
 	// first remove the "no offer" line if still present
 	if(parentElement.firstElementChild.nodeName == "H5"){
 		parentElement.firstElementChild.remove();
@@ -94,12 +98,6 @@ function divForJob(parentElement, data, lang) {
 	appendChildElementEn.setAttribute("href", data[0].pdf_en);
 	appendChildElementEn.innerHTML = data[0].title+"  ";
 
-	if (lang == 0) {
-		appendChildElement.hide();
-	} else {
-                appendChildElementEn.hide();
-	}
-	
 	if(data[0].filled == "true"){
 		const filledElementEn = document.createElement('span');
 		filledElementEn.innerHTML = "filled offer";
