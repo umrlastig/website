@@ -22,7 +22,7 @@
 
 // this file contains functions to handle the people.csv file of the members of LASTIG
 function parseCSVfile() {
-	var url = "https://raw.githubusercontent.com/umrlastig/lastig_data/master/recruiting.csv";
+	var url = "/lastig_data/recruiting.csv";
 	var myInit = { method: 'GET'};
 	fetch(url,myInit)
 	.then(function(response) {
