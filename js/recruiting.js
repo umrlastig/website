@@ -38,7 +38,7 @@ function parseCSVfile() {
 			step: function(row) {
 				// console.log("Row:", row.data);
 				if(row.data[0].type != ""){
-					if(row.data[0].type == "EC"){
+					if(row.data[0].type == "EC") {
 						var parent = document.getElementById("ec-offers");
 						divForJob(parent, row.data);
 					}
@@ -89,9 +89,17 @@ function parseCSVfile() {
 
 function divForJob(parentElement, data) {
 	// first remove the "no offer" line if still present
-	if (parentElement.firstElementChild.nodeName == "H5") {
-		parentElement.firstElementChild.remove();
-	}
+	// if (parentElement.firstElementChild.nodeName == "H5") {
+	// 	parentElement.firstElementChild.remove();
+	// }
+	// console.log(parentElement.nodeName);
+	for (var i=0; i < parentElement.childNodes.length; i++) {
+		// console.log(parentElement.childNodes[i].nodeName);
+        if (parentElement.childNodes[i].nodeName == "H5") {
+        	parentElement.childNodes[i].remove();
+        }
+    }
+
 
 	const childElement = document.createElement('a');
 	const appendChildElement = parentElement.appendChild(childElement);
