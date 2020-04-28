@@ -23,6 +23,8 @@
 // this file contains functions to handle the people.csv file of the members of LASTIG
 function parseCSVfile() {
 	var url = "/lastig_data/recruiting.csv";
+	// var url = "http://localhost/lastig/lastig_data/recruiting.csv";
+	// console.log(url);
 	var myInit = { method: 'GET'};
 	fetch(url,myInit)
 	.then(function(response) {
@@ -34,7 +36,7 @@ function parseCSVfile() {
 			header: true,
 			worker: true,
 			step: function(row) {
-				//console.log("Row:", row.data);
+				// console.log("Row:", row.data);
 				if(row.data[0].type != ""){
 					if(row.data[0].type == "EC"){
 						var parent = document.getElementById("ec-offers");
@@ -67,15 +69,19 @@ function parseCSVfile() {
 						}
 					}
 				}
+
 			},
 			complete: function() {
-					console.log("display offers done!");
+        		var classes = [".lang-fr", ".lang-en"];
+        		var lang = document.getElementById('select-lang').selectedIndex;
+				$( classes[lang] ).hide();
+				console.log("display offers done!");
 			}
 		});
 		return data;
 	})
 	.then(function () {
-                var lang = document.getElementById('select-lang').selectedIndex;
+		var lang = document.getElementById('select-lang').selectedIndex;
 		var classes = [".lang-fr", ".lang-en"];
 		$( classes[lang] ).hide();
 	});
@@ -83,7 +89,7 @@ function parseCSVfile() {
 
 function divForJob(parentElement, data) {
 	// first remove the "no offer" line if still present
-	if(parentElement.firstElementChild.nodeName == "H5"){
+	if (parentElement.firstElementChild.nodeName == "H5") {
 		parentElement.firstElementChild.remove();
 	}
 
@@ -92,13 +98,14 @@ function divForJob(parentElement, data) {
 	appendChildElement.setAttribute("class","list-group-item list-group-item-info lang-fr");
 	appendChildElement.setAttribute("href", data[0].pdf_fr);
 	appendChildElement.innerHTML = data[0].titre+"  ";
+	
 	const childElementEn = document.createElement('a');
 	const appendChildElementEn = parentElement.appendChild(childElementEn);
 	appendChildElementEn.setAttribute("class","list-group-item list-group-item-info lang-en");
 	appendChildElementEn.setAttribute("href", data[0].pdf_en);
 	appendChildElementEn.innerHTML = data[0].title+"  ";
 
-	if(data[0].filled == "true"){
+	if(data[0].filled == "true") {
 		const filledElementEn = document.createElement('span');
 		filledElementEn.innerHTML = "filled offer";
 		filledElementEn.setAttribute("class","label label-success lang-en");

@@ -24,6 +24,7 @@
 	function parsePeopleCSVfile() {
 		// Open a new connection, using the GET request on the URL endpoint
 		var url = "/lastig_data/people.csv";
+		// var url = "http://localhost/lastig/lastig_data/people.csv";
 
 		var myInit = { method: 'GET'};
 		fetch(url,myInit)
@@ -40,8 +41,11 @@
 						divForAllPeople(parent, row.data);}
 					},
 				complete: function() {
+					var classes = [".lang-fr", ".lang-en"];
+        			var lang = document.getElementById('select-lang').selectedIndex;
+					$( classes[lang] ).hide();
 					console.log("All done!");
-					},
+				},
 					worker: true
 				});
 			return data;
