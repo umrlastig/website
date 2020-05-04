@@ -50,6 +50,10 @@ function parseCSVfile() {
 						var parent = document.getElementById("postdoc-offers");
 						divForJob(parent, row.data);
 					}
+					else if(row.data[0].type == "inge"){
+						var parent = document.getElementById("inge-offers");
+						divForJob(parent, row.data);
+					}
 					else{
 						if(row.data[0].team == "ACTE"){
 							var parent = document.getElementById("intern-acte");
