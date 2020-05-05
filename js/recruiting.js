@@ -50,7 +50,7 @@ function parseCSVfile() {
 						var parent = document.getElementById("postdoc-offers");
 						divForJob(parent, row.data);
 					}
-					else if(row.data[0].type == "inge"){
+					else if(row.data[0].type == "ingenieur"){
 						var parent = document.getElementById("inge-offers");
 						divForJob(parent, row.data);
 					}
