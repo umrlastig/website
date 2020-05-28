@@ -353,8 +353,8 @@ body.fr :lang(en){
 }
 
 .people{
-  display: inline-block;
-	height:200px;
+  display: inline-table;
+	height:auto;
 }
 
 .text-status{
