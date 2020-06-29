@@ -54,18 +54,13 @@
   };
 
   function divForAllNews(parentElement, data) {
-    if (data[0].end_date != '') return;
-		const childElement = document.createElement('div');
+	const childElement = document.createElement('div');
     const appendChildElement = parentElement.appendChild(childElement);
-    appendChildElement.setAttribute("class","people col-lg-2 col-md-6 mb-lg-0 mb-5");
-
-	aElement = document.createElement('a');
-	aElement.setAttribute("href", data[0].webpage);
-	nameElement = document.createElement('h5');
-    nameElement.innerHTML = data[0].date +" ["+ data[0].team + "]: ";
-	nameElement.setAttribute("class","font-weight-bold mt-4 mb-3");
-	aElement.append(nameElement);
-    appendChildElement.appendChild(aElement);
+    appendChildElement.setAttribute("class","news col-lg-2 col-md-6 mb-lg-0 mb-5");
+	newsElement = document.createElement('p');
+    newsElement.innerHTML = data[0].date +" ["+ data[0].team + "]: ";
+	newsElement.setAttribute("class","font-weight-bold mt-4 mb-3");
+    appendChildElement.appendChild(newsElement);
     textenElement = document.createElement('p');
     textenElement.innerHTML = data[0].texten;
     textenElement.setAttribute("class","text blue-text text-status lang-en");
