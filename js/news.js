@@ -59,22 +59,21 @@
     const appendChildElement = parentElement.appendChild(childElement);
     appendChildElement.setAttribute("class","people col-lg-2 col-md-6 mb-lg-0 mb-5");
 
-		aElement = document.createElement('a');
-		aElement.setAttribute("href", data[0].webpage);
-		nameElement = document.createElement('h5');
+	aElement = document.createElement('a');
+	aElement.setAttribute("href", data[0].webpage);
+	nameElement = document.createElement('h5');
     nameElement.innerHTML = data[0].date +" ["+ data[0].team + "]: ";
-		nameElement.setAttribute("class","font-weight-bold mt-4 mb-3");
-		aElement.append(nameElement);
+	nameElement.setAttribute("class","font-weight-bold mt-4 mb-3");
+	aElement.append(nameElement);
     appendChildElement.appendChild(aElement);
-    statusElement = document.createElement('p');
-    statusElement.innerHTML = data[0].texten;
-    statusElement.setAttribute("class","text blue-text text-status lang-en");
-    appendChildElement.appendChild(statusElement);
-		statutElement = document.createElement('p');
-		statutElement.innerHTML = data[0].textfr;
-		statutElement.setAttribute("class","text blue-text text-status lang-fr");
-		appendChildElement.appendChild(statutElement);
-    //appendChildElement.innerHTML = data[0].status;
+    textenElement = document.createElement('p');
+    textenElement.innerHTML = data[0].texten;
+    textenElement.setAttribute("class","text blue-text text-status lang-en");
+    appendChildElement.appendChild(textenElement);
+	textfrElement = document.createElement('p');
+	textfrElement.innerHTML = data[0].textfr;
+	textfrElement.setAttribute("class","text blue-text text-status lang-fr");
+	appendChildElement.appendChild(textfrElement);
   };
 
 	var displayNews = function(){
