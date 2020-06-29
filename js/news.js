@@ -36,15 +36,15 @@
 				download: false,
 				header: true,
 				step: function(row) {
-					if(row.data[0].firstname.localeCompare("") != 0){
-						var parent = document.getElementById("people-container");
-						divForAllPeople(parent, row.data);}
+					if(row.data[0].texten.localeCompare("") != 0){
+						var parent = document.getElementById("news-container");
+						divForAllNews(parent, row.data);}
 					},
 				complete: function() {
 					var classes = [".lang-fr", ".lang-en"];
         			var lang = document.getElementById('select-lang').selectedIndex;
 					$( classes[lang] ).hide();
-					console.log("All done!");
+					console.log("All done for news!");
 				},
 					worker: true
 				});
@@ -53,7 +53,7 @@
 	        .then(function() { $("select-lang").selectpicker(); });
   };
 
-  function divForAllPeople(parentElement, data) {
+  function divForAllNews(parentElement, data) {
     if (data[0].end_date != '') return;
 		const childElement = document.createElement('div');
     const appendChildElement = parentElement.appendChild(childElement);
