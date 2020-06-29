@@ -36,7 +36,7 @@
 				download: false,
 				header: true,
 				step: function(row) {
-					if(row.data[0].texten.localeCompare("") != 0){
+					if(row.data[0].date){
 						var parent = document.getElementById("news-container");
 						divForAllNews(parent, row.data);}
 					},
