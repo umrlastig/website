@@ -56,12 +56,12 @@
   function divForAllNews(parentElement, data) {
 	const childElement = document.createElement('div');
 	const appendChildElement = parentElement.appendChild(childElement);
-	appendChildElement.setAttribute("class","news list-group-item list-group-item-info");
-	newsElement = document.createElement('p');
+	appendChildElement.setAttribute("class","news");
+	newsElement = document.createElement('span');
 	newsElement.innerHTML = data[0].date +" ["+ data[0].team + "]: ";
 	newsElement.setAttribute("class","font-weight-bold mt-4 mb-3");
 	appendChildElement.appendChild(newsElement);
-	textenElement = document.createElement('p');
+	textenElement = document.createElement('span');
 	textenElement.innerHTML = data[0].texten;
 	textenElement.setAttribute("class","text blue-text text-status lang-en");
 	appendChildElement.appendChild(textenElement);
