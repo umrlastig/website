@@ -65,7 +65,7 @@
 	textenElement.innerHTML = data[0].texten;
 	textenElement.setAttribute("class","text blue-text text-status lang-en");
 	appendChildElement.appendChild(textenElement);
-	textfrElement = document.createElement('p');
+	textfrElement = document.createElement('span');
 	textfrElement.innerHTML = data[0].textfr;
 	textfrElement.setAttribute("class","text blue-text text-status lang-fr");
 	appendChildElement.appendChild(textfrElement);
