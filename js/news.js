@@ -36,7 +36,7 @@
 				download: false,
 				header: true,
 				step: function(row) {
-					if(row.data[0].date){
+					if(row.data[0].date && row.data[0].only != "only"){
 						var parent = document.getElementById("news-container");
 						divForAllNews(parent, row.data);}
 					},
