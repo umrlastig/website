@@ -54,7 +54,10 @@
   };
 
   function divForAllPeople(parentElement, data) {
-	if (data[0].end_date != '') return;
+	if (data[0].member != 'false') return;
+	var d1 = new Date();
+	var d2 = new Date(data[0].end_date);
+	if (d2.getTime() < d1.getTime()) return;
 	const childElement = document.createElement('div');
 	const appendChildElement = parentElement.appendChild(childElement);
 	appendChildElement.setAttribute("class","people col-lg-2 col-md-6 mb-lg-0 mb-5");
