@@ -117,12 +117,12 @@ function divForJob(parentElement, data) {
 	appendChildElementEn.innerHTML = data[0].title;
 	//appendChildElement.innerHTML = data[0].status;
 	if(data[0].filled == "true") {
-		const filledElementEn = document.createElement('span');
-		filledElementEn.innerHTML = "(offer already filled) ";
+		const filledElementEn = document.createElement('b');
+		filledElementEn.innerHTML = "  (offer already filled) ";
 		filledElementEn.setAttribute("class","label label-success lang-en");
 		appendChildElementEn.appendChild(filledElementEn);
-		const filledElement = document.createElement('span');
-		filledElement.innerHTML = "(offre déjà pourvue) ";
+		const filledElement = document.createElement('b');
+		filledElement.innerHTML = "  (offre déjà pourvue) ";
 		filledElement.setAttribute("class","label label-success lang-fr");
 		appendChildElement.appendChild(filledElement);
 	}
