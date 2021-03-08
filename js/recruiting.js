@@ -104,7 +104,6 @@ function divForJob(parentElement, data) {
         }
     }
 
-
 	const childElement = document.createElement('a');
 	const appendChildElement = parentElement.appendChild(childElement);
 	appendChildElement.setAttribute("class","list-group-item list-group-item-info lang-fr");
@@ -112,7 +111,12 @@ function divForJob(parentElement, data) {
 	const childElementEn = document.createElement('a');
 	const appendChildElementEn = parentElement.appendChild(childElementEn);
 	appendChildElementEn.setAttribute("class","list-group-item list-group-item-info lang-en");
-		if(data[0].filled == "true") {
+	appendChildElement.setAttribute("href", data[0].pdf_fr);
+	appendChildElement.innerHTML = data[0].titre;
+	appendChildElementEn.setAttribute("href", data[0].pdf_en);
+	appendChildElementEn.innerHTML = data[0].title;
+	//appendChildElement.innerHTML = data[0].status;
+	if(data[0].filled == "true") {
 		const filledElementEn = document.createElement('span');
 		filledElementEn.innerHTML = "(offer already filled) ";
 		filledElementEn.setAttribute("class","label label-success lang-en");
@@ -122,13 +126,7 @@ function divForJob(parentElement, data) {
 		filledElement.setAttribute("class","label label-success lang-fr");
 		appendChildElement.appendChild(filledElement);
 	}
-	appendChildElement.setAttribute("href", data[0].pdf_fr);
-	appendChildElement.innerHTML = data[0].titre;
-	appendChildElementEn.setAttribute("href", data[0].pdf_en);
-	appendChildElementEn.innerHTML = data[0].title;
 
-
-	//appendChildElement.innerHTML = data[0].status;
 };
 
 var displayRecruiting = function(){
